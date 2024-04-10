@@ -33,7 +33,7 @@ public class PlayerShoot : MonoBehaviour
                 // Dispara o objeto de acordo com a configuração e a posição de mira no chão
                 foreach (var config in shootConfigs)
                 {
-                    Shoot(config, hit.point); // Dispara o objeto de acordo com a configuração e a posição de mira no chão
+                    Shoot(config,new Vector3 (hit.point.x, hit.point.y + config.spawnPoint.position.y, hit.point.z)); // Dispara o objeto de acordo com a configuração e a posição de mira no chão
                 }
             }
         }
